@@ -1,9 +1,15 @@
 #!/bin/sh
 
-echo "  checking Windows runtime"
+echo "  checking runtime"
+
+#architecture: x86_64,aarch64
+#runtime: linux-gnu, windows, darwin20
 
 runtime=`"${R_HOME}/bin/Rscript" -e 'cat(R.version$os)'`
+architecture=`"${R_HOME}/bin/Rscript" -e 'cat(R.version$arch)'`
+
 echo "  found: '$runtime'"
+echo "   arch: '${architecture}'"
 
 redatamurl=""
 
@@ -13,6 +19,11 @@ else
   #darwin20
   redatamurl="macos"
 fi;
+
+if [ "$architecture" != "x86_64" ]; then
+  redatamurl="$redatamurl-arm64"
+fi;
+
 
 url="https://redatam-core.s3.us-west-2.amazonaws.com/core-dev/$redatamurl/redatamx-core-$redatamurl-20241010.zip"
 

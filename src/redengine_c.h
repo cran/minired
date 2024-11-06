@@ -46,6 +46,8 @@ typedef void (*dictionary_variable_handle)(VoidPtr ptr, const char* name, const 
 #endif
 
 struct RedatamAPI {
+  bool is_runtime_loaded;
+
   std::function<void()> redc_init;
   std::function<void()> redc_destroy;
   std::function<char*()> redc_version;

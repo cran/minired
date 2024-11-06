@@ -6,7 +6,7 @@
 \alias{minired-package}
 \title{minired: R Interface to 'Redatam' Library}
 \description{
-Provides an API to work with 'Redatam' (see \url{https://www.redatam.org}) databases in both formats: 'RXDB' (new format) and 'DICX' (old format) and running 'Redatam' programs written in 'SPC' language. It's a wrapper around 'Redatam' core and provides functions to open a database ('redatam_open()'), list entities and variables from the database ('redatam_entities()', 'redatam_variables()') and execute a 'SPC' program and gets the results as data frames ('redatam_query()'/'redatam_run()').
+This package is deprecated. Please use 'redatamx' instead. Provides an API to work with 'Redatam' (see \url{https://redatam.org}) databases in both formats: 'RXDB' (new format) and 'DICX' (old format) and running 'Redatam' programs written in 'SPC' language. It's a wrapper around 'Redatam' core and provides functions to open/close a database (redatam_open()/redatam_close()), list entities and variables from the database (redatam_entities(), redatam_variables()) and execute a 'SPC' program and gets the results as data frames (redatam_query(), redatam_run()).
 }
 \author{
 \strong{Maintainer}: Jaime Salvador \email{jaime.salvador@ideasybits.com} (\href{https://orcid.org/0000-0002-3564-8929}{ORCID})

@@ -1,7 +1,6 @@
 Package: minired
 Title: R Interface to 'Redatam' Library
-Version: 1.0.0
-Date: 2024-10-10
+Version: 1.0.1
 Authors@R: c(
     person(
       given = "Jaime", 
@@ -15,13 +14,14 @@ Authors@R: c(
     )
   )
 Maintainer: Jaime Salvador <jaime.salvador@ideasybits.com>
-Description: Provides an API to work with 'Redatam' (see <https://www.redatam.org>) 
+Description: This package is deprecated. Please use 'redatamx' instead.
+  Provides an API to work with 'Redatam' (see <https://redatam.org>) 
   databases in both formats: 'RXDB' (new format) and 'DICX' (old format) and running 
   'Redatam' programs written in 'SPC' language. It's a wrapper around 'Redatam' 
-  core and provides functions to open a database ('redatam_open()'), list entities 
-  and variables from the database ('redatam_entities()', 'redatam_variables()') 
+  core and provides functions to open/close a database (redatam_open()/redatam_close()), 
+  list entities and variables from the database (redatam_entities(), redatam_variables()) 
   and execute a 'SPC' program and gets the results as data frames 
-  ('redatam_query()'/'redatam_run()').
+  (redatam_query(), redatam_run()).
 License: GPL (>= 3)
 Encoding: UTF-8
 Language: en-US
@@ -34,8 +34,8 @@ SystemRequirements: 'Redatam' runtime engine (see https://redatam.org),
         build step. Currently supported platforms are Windows and Linux
         (both for x86-64 processors only)
 Copyright: See COPYRIGHTS for details.
-Packaged: 2024-10-24 15:47:32 UTC; jsalvador2024
+Packaged: 2024-10-30 15:10:40 UTC; jsalvador2024
 Author: Jaime Salvador [aut, cre] (<https://orcid.org/0000-0002-3564-8929>),
   CELADE [cph]
 Repository: CRAN
-Date/Publication: 2024-10-25 09:20:06 UTC
+Date/Publication: 2024-11-06 08:50:02 UTC

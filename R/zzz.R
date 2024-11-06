@@ -12,5 +12,8 @@
 }
 
 .onAttach<-function(libname, pkgname) {
-  packageStartupMessage( paste(redatam_version(), "\n") )
+  packageStartupMessage( paste("Using: ", redatam_version()) )
+  packageStartupMessage(
+        "WARNING: This package is deprecated and may be removed in future releases. Please use [redatamx] instead."
+    )
 }
